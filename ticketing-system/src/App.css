@@ -1,0 +1,253 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  font-size: 3rem;
+  color: #e53935; /* Bright red */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+  text-shadow: 2px 2px #000; /* Black shadow for contrast */
+}
+
+/* Configuration Form */
+.configuration-form {
+  background: #f9f9f9; /* Light gray */
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #333; /* Black border */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+.configuration-form input {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #333; /* Black border */
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333; /* Dark text */
+  background-color: #ffffff; /* White input background */
+  transition: border 0.3s ease-in-out;
+}
+
+.configuration-form input:focus {
+  border: 1px solid #e53935; /* Red focus */
+  outline: none;
+}
+
+.configuration-form button {
+  background: #e53935; /* Red */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.configuration-form button:hover {
+  background: #b71c1c; /* Darker red */
+  transform: scale(1.05); /* Subtle zoom */
+}
+
+/* Ticket Status */
+.ticket-status {
+  background: #f9f9f9; /* Light gray */
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #333; /* Black border */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+  animation: popIn 0.8s ease-out;
+}
+
+.ticket-status h2 {
+  margin-bottom: 10px;
+  color: #e53935; /* Red for headers */
+}
+
+.ticket-status p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Dark text */
+}
+
+/* Control Panel */
+.control-panel {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.control-panel button {
+  background: #e53935; /* Red */
+  color: #ffffff; /* White text */
+  border: 2px solid #333; /* Black border */
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.control-panel button:hover {
+  background: #b71c1c; /* Darker red */
+  transform: scale(1.05); /* Subtle zoom */
+}
+
+/* Log Display */
+.log-display {
+  background: #f9f9f9; /* Light gray */
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #333; /* Black border */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+.log-display h2 {
+  margin-bottom: 10px;
+  color: #e53935; /* Red for headers */
+}
+
+.log-display ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-display li {
+  text-align: left;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd; /* Light gray divider */
+  color: #333; /* Dark text */
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.log-display li:last-child {
+  border-bottom: none;
+}
+
+/* Error Notification */
+.error-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #e53935; /* Red */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: shake 0.5s ease-out;
+}
+
+.error-notification .close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.error-notification .close-button:hover {
+  color: #ffcccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}

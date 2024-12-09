@@ -1,0 +1,19 @@
+.ticket-status {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    max-width: 600px;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .ticket-status h2 {
+    color: #e53935; /* Red */
+  }
+  
+  .ticket-status p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  

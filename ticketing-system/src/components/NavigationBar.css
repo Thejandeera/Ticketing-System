@@ -1,0 +1,68 @@
+.navigation-bar {
+    position: fixed; /* Pin the navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .nav-title {
+    font-size: 1.5rem;
+    color: #e53935; /* Red */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow for a subtle effect */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333; /* Black */
+    font-size: 1rem;
+    padding: 8px 15px; /* Increased padding for comfort */
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a:hover {
+    background-color: #e53935; /* Red */
+    color: #ffffff;
+    border-color: #e53935; /* Red */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .nav-links .active {
+    background-color: #e53935; /* Red */
+    color: #ffffff;
+    border-color: #e53935; /* Red */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect for active link */
+    transform: translateY(-2px); /* Slightly lifts the active link for prominence */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
